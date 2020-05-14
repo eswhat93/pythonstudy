@@ -5,7 +5,7 @@
 
 #배우기전
 data = [2,5,1,3,8,7]
-
+ 
 def sel(dataList):
     for i in range(len(dataList)-1):
         index = dataList.index(min(dataList[i:]))
