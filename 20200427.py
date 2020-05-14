@@ -9,7 +9,7 @@ class FourCal:
 
 a = FourCal()
 print(a.setdata(1,2))
-#print(type(a))
+#print(type(a)) 
 #pass : 아무것도 수행하지 않는 문법/ 임시로 코드 작성할때 주로 사용
 #메서드의 또 다른 호출 방법
 #1. 클래스를 통해 메서드를 호출

@@ -38,4 +38,4 @@ def selection_sort(data_list):
 
 print(selection_sort(data2))
 
-#재귀용법  
+#재귀용법   s

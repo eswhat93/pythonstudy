@@ -13,7 +13,7 @@ if(money>3000):
     print('택시')
 elif(money==2000):
     print('걸어')
-
+ 
 card = True
 
 if money>=3000:
