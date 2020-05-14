@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class stack:
     def __init__(self):
         self.items = []
@@ -29,3 +30,6 @@ def reverseString(str):
         return result
 
 print(reverseString("test"))
+=======
+#test2ewdsfdsfdss
+>>>>>>> f7d5426820befdda1c32d04b2425c3b01e60fe4e
