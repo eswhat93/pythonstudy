@@ -6,14 +6,14 @@
 #배우기전
 data = [2,5,1,3,8,7]
  
-def sel(dataList):
+def sel(dataList): 
     for i in range(len(dataList)-1):
         index = dataList.index(min(dataList[i:]))
         dataList[i],dataList[index] = min(dataList[i:]), dataList[i]
         print(dataList)
     return data
 
-print(sel(data))
+#print(sel(data))
 
 #배우고나서
 #데이터가 두개일때, 세개일때, 네개일때 짜면서 보완
@@ -25,7 +25,7 @@ print(sel(data))
 #dataList[num],dataList[lowest]=dataList[lowest],dataList[num]
 
 data2 = [2,5,1,3,8,7]
-print("#############")
+#print("#############")
 def selection_sort(data_list):
     for stand in range(len(data_list) - 1):
         lowest = stand
@@ -36,6 +36,60 @@ def selection_sort(data_list):
         print (data_list)
     return data_list
 
-print(selection_sort(data2))
+#print(selection_sort(data2))
 
 #재귀용법
+#함수 안에서 동일한 함수를 호출하는 형태/ 여러알고리즘 작성시 사용된다고함
+#2! = 1X2
+#3! = 1X2X3
+#규칙 = > n! = n X (n-1)!
+#함수(n)은 n>1 이면 return nX함수(n-1)
+#함수(n)은 n=1이면 return n
+
+
+def factorial(n):
+    if n > 1 :
+        return n * factorial(n-1)
+    else :
+        return n
+
+#for num in range(10):
+#    print(factorial(num))
+
+#재귀 용법을 활용한 프로그래밍 연습
+def multiple(data):
+    if data <=1:
+        return data
+    return data * multiple(data-1)
+
+#print(multiple(10))
+
+#숫자가 들어있는 리스트/ 리스트의 합리턴하는 함수 만들기
+import random
+data = random.sample(range(100),10)
+print(data)
+def total(d):
+    first = 1
+    for i in range(len(d)-1):
+        first = first + d[i]
+        print(d[i])
+    return first
+
+#print(total(data))
+
+#20200515
+#재귀함수 이용해서 리스트의 합 구하기
+def total2(data):
+    if len(data)==1 :
+        return data[0]
+    return data[0] + total2(data[1:])
+
+print(total2([3,4,5,6]))
+
+#회문(palindrome)은 순서를 거꾸로 읽어도 제대로 읽은 것과 같은 단어와 문장을 이야기헙니다. 
+#회문을 판별할 수 있는 함수를 리스트 슬라이싱을 활용해서 만드세요
+#슬라이싱은 a[start : end : step]
+
+t = ["MOTOR"]
+
+print(t[0 : : 1])
