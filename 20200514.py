@@ -148,4 +148,3 @@ def func(data):
         return func(3*data +1)
 #func(int(input()))
 
-
