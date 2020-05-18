@@ -90,6 +90,62 @@ print(total2([3,4,5,6]))
 #회문을 판별할 수 있는 함수를 리스트 슬라이싱을 활용해서 만드세요
 #슬라이싱은 a[start : end : step]
 
-t = ["MOTOR"]
+#20200518
+string = "MOTOM"
 
-print(t[0 : : 1])
+#배우기전
+def pal(data):
+    cnt = 0
+    for i in range((len(data)-1)):
+        if data[i] == data[len(data)-i-1]:
+            print(data[i], " = ", data[len(data)-i-1])
+        else:
+            print("dsd")
+            break
+    return "회문"
+
+print(pal(string))
+
+#배운후
+def recursive(data):
+    if len(data) <=1 :
+        return True
+
+    if data[0] == data[-1]:
+        #print(data[1:-1])
+        return recursive(data[1:-1])
+
+    else:
+        return False
+
+print(recursive(string))
+
+
+#정수 n 
+#배우기전
+def t(n):
+    print(n)
+    if n<=1:
+        return 1
+    if n%2 == 0 :
+        n = n/2
+    else :
+        n = (3*n) + 1
+    t(n)
+    return n
+
+#t(int(input()))
+
+#배운후
+def func(data):
+    print(data)
+    if data == 1 :
+        return
+
+    if data%2 == 0:
+        return func(int(data / 2))
+    else:
+        return func(3*data +1)
+#func(int(input()))
+
+
