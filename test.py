@@ -18,7 +18,6 @@ class stack:
         return self.items.pop()
 
 
-
 def reverseString(str):
     s = stack()
     result = ""
